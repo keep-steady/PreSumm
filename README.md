@@ -1,5 +1,12 @@
 # PreSumm
 
+- pytorch 버전에러 해결
+"/home/go/yhshin/Summ_test/src/models/data_loader.py"의 33번째, 34번째, 39번째 줄 수정
+* 1 - (src == 0) -> ~(src==0)으로 수정
+
+
+
+
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
 
 **Updates Jan 22 2020**: Now you can **Summarize Raw Text Input!**. Swith to the dev branch, and use `-mode test_text` and use `-text_src $RAW_SRC.TXT` to input your text file.
