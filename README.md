@@ -1,9 +1,10 @@
 # PreSumm
 
-- pytorch 버전에러 해결
-"/home/go/yhshin/Summ_test/src/models/data_loader.py"의 33번째, 34번째, 39번째 줄 수정
+** pytorch 버전에러 해결
+* "src/models/data_loader.py"의 33번째, 34번째, 39번째 줄 수정
 * 1 - (src == 0) -> ~(src==0)으로 수정
 
+** NNVIDIA P100x2 기준 batch_size : 100
 
 
 
