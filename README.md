@@ -1,11 +1,16 @@
 # PreSumm
 
-** pytorch 버전에러 해결
+** pytorch 버전에러 해결 **
 * "src/models/data_loader.py"의 33번째, 34번째, 39번째 줄 수정
 * 1 - (src == 0) -> ~(src==0)으로 수정
 
 ** NNVIDIA P100x2 기준 batch_size : 100
 
+
+#### BertAbs 학습 코드
+```
+python train.py -mode train -accum_count 5 -batch_size 80 -bert_data_path ../data/already_converted_data/cnndm -dec_dropout 0.1 -log_file ../logs/abs -lr 0.05 -model_path ../models/abs -save_checkpoint_steps 2000 -seed 777 -sep_optim false -train_steps 200000 -use_bert_emb true -use_interval true -warmup_steps 8000  -visible_gpus 0,1 -max_pos 512 -report_every 50 -enc_hidden_size 512  -enc_layers 6 -enc_ff_size 2048 -enc_dropout 0.1 -dec_layers 6 -dec_hidden_size 512 -dec_ff_size 2048 -encoder baseline -task abs
+```
 
 
 **This code is for EMNLP 2019 paper [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345)**
